@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Movie Directory</string>
+    <string name="homebar">Movie Directory</string>
+    <string name="profilnama">Name</string>
+    <string name="profilnim">Strudent Number</string>
+    <string name="profilkelas">Class</string>
+
+    <string name="detailjudul">Original Tittle</string>
+    <string name="detailrilis">Release Date</string>
+    <string name="detailpopularitas">Popularity</string>
+    <string name="detailsinopsis">Overview</string>
+    <string name="profiltentang">About App</string>
+    <string name="profiltujuan">This application was created aiming to learn jetpack compose and also fulfill the mid-exam assignment</string>
+</resources>
