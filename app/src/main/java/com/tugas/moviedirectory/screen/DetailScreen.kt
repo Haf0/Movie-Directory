@@ -37,7 +37,7 @@ fun DetailScreen(model: MovieViewModel, id:Int) {
         }
 
         Divider(color = androidx.compose.ui.graphics.Color.LightGray, thickness = 2.dp,modifier = Modifier.padding(vertical = 20.dp))
-        TextRow(jenisnya = stringResource(R.string.detailjudul), isinya = ": ${data.originaltittle}" )
+                TextRow(jenisnya = stringResource(R.string.detailjudul), isinya = ": ${data.originaltittle}" )
         TextRow(jenisnya = stringResource(R.string.detailrilis), isinya = ": ${data.releasedate}")
         TextRow(jenisnya = stringResource(R.string.detailpopularitas), isinya = ": ${data.popularity}")
         Divider(color = androidx.compose.ui.graphics.Color.LightGray, thickness = 1.dp,modifier = Modifier.padding(vertical = 20.dp))

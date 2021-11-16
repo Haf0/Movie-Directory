@@ -57,7 +57,7 @@ fun DetailCard(data:Movie, navController: NavController,movieViewModel:MovieView
     Card(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(20.dp)
+            .padding(10.dp)
             .clickable {
                 movieViewModel.getdetailMovie(data.id)
                 navController.navigate("detailScreen/${data.id}")
@@ -83,10 +83,10 @@ fun DetailCard(data:Movie, navController: NavController,movieViewModel:MovieView
                 .fillMaxSize()
                 .background(
                     Brush.verticalGradient(
-                                listOf(
-                                    Color.Transparent,
-                                    Color.Black
-                                ),
+                        listOf(
+                            Color.Transparent,
+                            Color.Black
+                        ),
                         startY = 400f
                     )
                 )
@@ -115,10 +115,7 @@ fun TopBarApp(navController: NavController) {
             ) {
                 androidx.compose.material.Icon(Icons.Filled.AccountCircle, contentDescription = "Profil")
             }
-            
 
         }
     )
-
-
 }

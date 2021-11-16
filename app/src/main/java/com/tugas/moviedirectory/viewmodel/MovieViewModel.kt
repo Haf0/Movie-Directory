@@ -7,13 +7,11 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.tugas.moviedirectory.Api.ApiService
-import com.tugas.moviedirectory.Api.MovieApi
-import com.tugas.moviedirectory.model.DataMovie
 import com.tugas.moviedirectory.model.Movie
 import kotlinx.coroutines.launch
 
 class MovieViewModel : ViewModel() {
-    private val api: ApiService = MovieApi.retrofitService
+    private val api: ApiService = ApiService.getInstance()
     var listMovie : List<Movie> by mutableStateOf(listOf())
     var movie : Movie? =null
 

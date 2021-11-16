@@ -22,5 +22,5 @@ data class Movie(
 
     val popularity: String,
 
-    val id: Int,
+    val id: Int
 )

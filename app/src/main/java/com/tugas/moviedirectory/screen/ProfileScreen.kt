@@ -1,5 +1,6 @@
 package com.tugas.moviedirectory.screen
 
+
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
@@ -9,6 +10,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
@@ -17,6 +19,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.tugas.moviedirectory.R
 
+
 @Composable
 fun ProfileScreen() {
     Column(modifier = Modifier.padding(20.dp)) {
@@ -24,7 +27,6 @@ fun ProfileScreen() {
     }
 
 }
-
 
 @Preview(showBackground = true)
 @Composable
@@ -40,14 +42,20 @@ fun Identitas() {
                 .padding(top = 20.dp),
             horizontalArrangement = Arrangement.Center
         ) {
-            Image(
-                painter = painterResource(id = R.drawable.ku),
-                contentDescription = null,
+            Box(
                 modifier = Modifier
+                    .size(250.dp,250.dp)
                     .clip(CircleShape)
-            )
+            ) {
+                Image(
+                    painter = painterResource(id = R.drawable.ku),
+                    contentDescription = null,
+                    contentScale = ContentScale.Crop
+                )
+            }
+
         }
-        Spacer(modifier = Modifier.padding(20.dp))
+        Spacer(modifier = Modifier.padding(10.dp))
         TextIdentitas(jenisnya = stringResource(R.string.profilnama), isinya =": Hafit Abekrori" )
         TextIdentitas(jenisnya = stringResource(R.string.profilnim), isinya =": 19.11.2765" )
         TextIdentitas(jenisnya = stringResource(R.string.profilkelas), isinya =": 19-S1IF-03" )
