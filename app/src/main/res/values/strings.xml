@@ -11,4 +11,5 @@
     <string name="detailsinopsis">Overview</string>
     <string name="profiltentang">About App</string>
     <string name="profiltujuan">This application was created aiming to learn jetpack compose and also fulfill the mid-exam assignment</string>
+    <string name="btnGanti">Change Language</string>
 </resources>

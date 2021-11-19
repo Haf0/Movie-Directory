@@ -4,7 +4,9 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.GridCells
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyVerticalGrid
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
@@ -41,13 +43,14 @@ fun HomeScreen(movieViewModel: MovieViewModel,navController: NavController) {
 
 @Composable
 fun Detaillist(movie: List<Movie>, navController: NavController, movieViewModel: MovieViewModel) {
+
     if(movie.size >0){
-        LazyColumn{
+        LazyColumn(content = {
             itemsIndexed(items=movie){
-                    _, 
-                    item -> DetailCard(data = item, navController = navController, movieViewModel = movieViewModel )
+                index, item ->
+                DetailCard(data = item, navController = navController, movieViewModel = movieViewModel)
             }
-        }
+        })
     }
 }
 

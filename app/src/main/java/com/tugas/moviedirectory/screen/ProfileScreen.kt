@@ -1,9 +1,13 @@
 package com.tugas.moviedirectory.screen
 
 
+
+import android.content.Intent
+import android.provider.Settings
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material.Button
 import androidx.compose.material.Divider
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -11,13 +15,18 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.core.content.ContextCompat.startActivity
 import com.tugas.moviedirectory.R
+
+
+
 
 
 @Composable
@@ -31,6 +40,8 @@ fun ProfileScreen() {
 @Preview(showBackground = true)
 @Composable
 fun Identitas() {
+    val context = LocalContext.current
+    val i = Intent(Settings.ACTION_LOCALE_SETTINGS)
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -44,7 +55,7 @@ fun Identitas() {
         ) {
             Box(
                 modifier = Modifier
-                    .size(250.dp,250.dp)
+                    .size(250.dp, 250.dp)
                     .clip(CircleShape)
             ) {
                 Image(
@@ -68,7 +79,17 @@ fun Identitas() {
         )
         Divider(color = Color.LightGray, thickness = 2.dp,modifier = Modifier.padding(vertical = 20.dp))
         Text(text = stringResource(R.string.profiltujuan))
-        
+        Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Center) {
+            Button(
+                onClick =
+                {
+                    context.startActivity(i)
+                },
+                Modifier.padding(top = 20.dp)
+            ) {
+                Text(text = stringResource(id = R.string.btnGanti))
+            }
+        }
     }
 }
 

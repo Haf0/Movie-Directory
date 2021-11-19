@@ -11,4 +11,5 @@
     <string name="detailsinopsis">Sinopsis</string>
     <string name="profiltentang">Tentang Aplikasi</string>
     <string name="profiltujuan">"Aplikasi ini dibuat bertujuan untuk mempelajari jetpack compose dan juga memenuhi tugas tengah semester "</string>
+    <string name="btnGanti">Ganti Bahasa</string>
 </resources>
